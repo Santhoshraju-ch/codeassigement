@@ -1,5 +1,46 @@
 package com.codeassigements.model;
 
-public class Position {
+import java.util.Objects;
 
+public class Position {
+	public int x, y;
+
+	public Position() {
+	}
+
+	public Position(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (!(o instanceof Position))
+			return false;
+		Position pos = (Position) o;
+		return x == pos.x && y == pos.y;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(x, y);
+	}
 }
+	
