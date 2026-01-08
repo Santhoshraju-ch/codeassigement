@@ -25,10 +25,10 @@ public class ProbeService {
 		int newY = probe.getY();
 
 		switch (probe.getDirection()) {
-		case NORTH -> newY += step;
-		case SOUTH -> newY -= step;
-		case EAST -> newX += step;
-		case WEST -> newX -= step;
+		case N -> newY += step;
+		case S -> newY -= step;
+		case E -> newX += step;
+		case W -> newX -= step;
 		}
 
 		if (grid.isValid(newX, newY)) {

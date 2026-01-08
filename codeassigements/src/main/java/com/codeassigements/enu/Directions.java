@@ -1,8 +1,15 @@
 package com.codeassigements.enu;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 public enum Directions {
 
-	NORTH, WEST, SOUTH, EAST;
+	 N, S, E, W;
+
+	@JsonCreator
+	public static Directions fromString(String value) {
+		return Directions.valueOf(value.toUpperCase());
+	}
 
 	public Directions left() {
 		return values()[(ordinal() + 3) % 4];
