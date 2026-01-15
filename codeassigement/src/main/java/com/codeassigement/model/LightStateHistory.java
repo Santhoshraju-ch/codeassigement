@@ -8,20 +8,19 @@ import com.codeassigement.enu.LightColor;
 
 public class LightStateHistory {
 
-    private final LocalDateTime timestamp;
-    private final Map<Direction, LightColor> state;
+	private final LocalDateTime timestamp;
+	private final Map<Direction, LightColor> state;
 
-    public LightStateHistory(LocalDateTime timestamp,
-                             Map<Direction, LightColor> state) {
-        this.timestamp = timestamp;
-        this.state = state;
-    }
+	public LightStateHistory(LocalDateTime timestamp, Map<Direction, LightColor> state) {
+		this.timestamp = timestamp;
+		this.state = state;
+	}
 
-    public LocalDateTime getTimestamp() {
-        return timestamp;
-    }
+	public LocalDateTime getTimestamp() {
+		return timestamp;
+	}
 
-    public Map<Direction, LightColor> getState() {
-        return state;
-    }
+	public Map<Direction, LightColor> getState() {
+		return state;
+	}
 }

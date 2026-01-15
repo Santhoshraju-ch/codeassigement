@@ -5,20 +5,19 @@ import java.util.Set;
 
 public enum DirectionGroupMapper {
 
-    NORTH_SOUTH(EnumSet.of(Direction.NORTH, Direction.SOUTH)),
-    EAST_WEST(EnumSet.of(Direction.EAST, Direction.WEST));
+	NORTH_SOUTH(EnumSet.of(Direction.NORTH, Direction.SOUTH)), EAST_WEST(EnumSet.of(Direction.EAST, Direction.WEST));
 
-    private final Set<Direction> directions;
+	private final Set<Direction> directions;
 
-    DirectionGroupMapper(Set<Direction> directions) {
-        this.directions = directions;
-    }
+	DirectionGroupMapper(Set<Direction> directions) {
+		this.directions = directions;
+	}
 
-    public Set<Direction> getDirections() {
-        return directions;
-    }
+	public Set<Direction> getDirections() {
+		return directions;
+	}
 
-    public DirectionGroup next() {
-        return this == NORTH_SOUTH ? DirectionGroup.EAST_WEST : DirectionGroup.NORTH_SOUTH;
-    }
+	public DirectionGroup next() {
+		return this == NORTH_SOUTH ? DirectionGroup.EAST_WEST : DirectionGroup.NORTH_SOUTH;
+	}
 }
